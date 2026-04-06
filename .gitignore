@@ -1,5 +1,8 @@
 references-upstream-luffah.git/
-output/
+output/*
+!output/pdf/
+output/pdf/*
+!output/pdf/terminus-rendu.pdf
 tmp/
 *.log
 Thumbs.db

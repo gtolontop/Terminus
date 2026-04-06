@@ -4,6 +4,7 @@ Ce depot rassemble le jeu local, les ressources externes utiles, un corrigé dé
 
 Contenu principal :
 
+- `output/pdf/terminus-rendu.pdf` : version courte imprimable
 - `docs/solution-detaillee.md` : walkthrough complet du jeu et explication des commandes
 - `docs/plan-du-jeu.md` : arbre / carte des lieux
 - `docs/journal-de-bord.md` : progression, vérifications et itérations

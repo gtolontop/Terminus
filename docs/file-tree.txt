@@ -1,0 +1,83 @@
+Départ
+|-- BoisDesLutins
+|   |-- Panneau
+|   |-- RentreChezToi
+|   `-- AcadémieDesBots
+|       |-- Cours
+|       `-- SalleDEntrainement
+|           |-- Note
+|           |-- Pilier1
+|           |-- Pilier2
+|           |-- Pilier3
+|           `-- Boîte
+`-- Prairie
+    |-- Poney
+    `-- Montagnes
+        |-- VieilHomme
+        |-- Manuscrit
+        `-- Cave
+            `-- SombreCorridor
+                `-- Cellier
+                    |-- Rocher
+                    |-- PetitRenfoncement
+                    `-- Tunnel
+                        |-- TouffeDePoils
+                        `-- ChambreDePierre
+                            `-- Portail
+                                `-- PlaceDuVillage
+                                    |-- Canard
+                                    |-- VieilHomme
+                                    |-- VillageoiseEnPleurs
+                                    |-- PlaceDuMarche
+                                    |   |-- Vendeur
+                                    |   |-- SacÀDos
+                                    |   |-- rm
+                                    |   `-- mkdir
+                                    |-- Bibliothèque
+                                    |   |-- IntrigantLevier
+                                    |   |-- HistoireDeTerminus
+                                    |   |-- NostalgieDuPays
+                                    |   |-- RomanceDePoche
+                                    |   |-- ToutSurLesSorts
+                                    |   |-- SuperLivreDesSortilèges
+                                    |   |-- VIMproved
+                                    |   `-- PièceSecrète
+                                    |       |-- Grep
+                                    |       `-- Bibliothécaire
+                                    |-- CheminEnPierres
+                                    |   |-- ÉnormeRocher
+                                    |   `-- Ferme
+                                    |       |-- Fermier
+                                    |       `-- EpisDeMais
+                                    |-- BoutiqueArtisanale
+                                    |   |-- Artisane
+                                    |   |-- BabiolleÉtrange
+                                    |   `-- Dragon
+                                    `-- PontCassé
+                                        `-- Clairière
+                                            |-- HommeEnPleurs
+                                            |-- Maison
+                                            `-- CheminInquiétant
+                                                |-- RoncesTordues
+                                                `-- CaveDesTrolls
+                                                    |-- TrollMoche
+                                                    |-- TrollPlusMoche
+                                                    |-- TrollAbsolumentHideux
+                                                    |-- Cage
+                                                    |   `-- EnfantKidnapé
+                                                    `-- Toboggan
+                                                        `-- FichiersNoyau
+                                                            |-- Prospectus
+                                                            |-- Instructions
+                                                            |-- Certificat
+                                                            |-- PlusDeFichiersNoyau
+                                                            |   |-- L.txt
+                                                            |   |-- M.txt
+                                                            |   |-- Q.txt
+                                                            |   |-- R.txt
+                                                            |   |-- S.txt
+                                                            |   |-- T.txt
+                                                            |   |-- U.txt
+                                                            |   |-- V.txt
+                                                            |   `-- W.txt
+                                                            `-- Paradis
