@@ -17,244 +17,257 @@ FONT_BOLD = "ArialTerminusBold"
 FONT_CODE = "ConsolasTerminus"
 
 COLORS = {
-    "bg": colors.HexColor("#F6F1E8"),
-    "ink": colors.HexColor("#17212B"),
-    "muted": colors.HexColor("#5D6975"),
-    "line": colors.HexColor("#C8D2DD"),
-    "blue": colors.HexColor("#234E70"),
-    "green": colors.HexColor("#2D6A4F"),
-    "orange": colors.HexColor("#C96B1F"),
-    "gold": colors.HexColor("#B88A1B"),
-    "red": colors.HexColor("#B44338"),
+    "bg": colors.HexColor("#F5F0E7"),
+    "ink": colors.HexColor("#18232F"),
+    "muted": colors.HexColor("#596674"),
+    "line": colors.HexColor("#C9D4DD"),
+    "shadow": colors.HexColor("#DDE5EC"),
+    "blue": colors.HexColor("#254E70"),
+    "green": colors.HexColor("#2F6F55"),
+    "orange": colors.HexColor("#CC741F"),
+    "gold": colors.HexColor("#BD9119"),
+    "red": colors.HexColor("#B8483D"),
     "soft_blue": colors.HexColor("#EAF2F8"),
-    "soft_green": colors.HexColor("#EBF6EF"),
-    "soft_orange": colors.HexColor("#FCF1E5"),
-    "soft_gold": colors.HexColor("#FBF3DE"),
+    "soft_green": colors.HexColor("#ECF6F0"),
+    "soft_orange": colors.HexColor("#FCF1E4"),
+    "soft_gold": colors.HexColor("#FBF4DF"),
     "soft_red": colors.HexColor("#F9E8E5"),
+    "white": colors.white,
 }
 
 
-MAIN_CARDS = [
-    {
+CARDS = {
+    "start": {
         "title": "Départ",
-        "lines": [
-            "ls",
-            "cat Palourde",
-            "cd BoisDesLutins",
-        ],
+        "lines": ["ls", "cat Palourde"],
         "x": 20,
-        "y": 392,
+        "y": 396,
         "w": 96,
-        "h": 78,
+        "h": 82,
         "fill": COLORS["soft_blue"],
         "stroke": COLORS["blue"],
     },
-    {
+    "forest": {
         "title": "BoisDesLutins",
-        "lines": [
-            "cat RentreChezToi",
-            "cd AcadémieDesBots/Cours",
-        ],
+        "lines": ["ls", "cat RentreChezToi"],
         "x": 132,
-        "y": 392,
-        "w": 112,
-        "h": 78,
+        "y": 396,
+        "w": 108,
+        "h": 82,
         "fill": COLORS["soft_green"],
         "stroke": COLORS["green"],
     },
-    {
-        "title": "Académie",
+    "academy": {
+        "title": "AcadémieDesBots",
         "lines": [
+            "ls",
+            "cd Cours",
             "cat Professeur",
             "cd ../SalleDEntrainement",
+            "ls",
             "mv Pilier* ~/",
         ],
-        "x": 260,
-        "y": 380,
-        "w": 136,
-        "h": 90,
+        "x": 254,
+        "y": 382,
+        "w": 148,
+        "h": 96,
         "fill": COLORS["soft_green"],
         "stroke": COLORS["green"],
     },
-    {
+    "prairie": {
         "title": "Prairie",
-        "lines": [
-            "cd ~/Prairie",
-            "cat Poney",
-        ],
-        "x": 412,
-        "y": 392,
-        "w": 102,
-        "h": 78,
+        "lines": ["ls", "cat Poney"],
+        "x": 416,
+        "y": 396,
+        "w": 100,
+        "h": 82,
         "fill": COLORS["soft_green"],
         "stroke": COLORS["green"],
     },
-    {
+    "mountains": {
         "title": "Montagnes",
-        "lines": [
-            "cd Montagnes",
-            "cat VieilHomme",
-            "cat Manuscrit",
-        ],
+        "lines": ["ls", "cat VieilHomme", "cat Manuscrit"],
         "x": 530,
-        "y": 392,
-        "w": 112,
-        "h": 78,
+        "y": 396,
+        "w": 110,
+        "h": 82,
         "fill": COLORS["soft_green"],
         "stroke": COLORS["green"],
     },
-    {
-        "title": "Cave -> Portail",
+    "cave": {
+        "title": "Cave et Portail",
         "lines": [
-            "cd Cave/SombreCorridor/Cellier",
+            "ls",
+            "cd SombreCorridor",
+            "cd Cellier",
+            "ls",
             "mv Rocher PetitRenfoncement",
-            "cd .../PlaceDuVillage",
+            "cd Tunnel",
+            "ls",
+            "cd ChambreDePierre",
+            "cd Portail",
+            "ls",
         ],
-        "x": 658,
-        "y": 380,
-        "w": 164,
-        "h": 90,
+        "x": 664,
+        "y": 282,
+        "w": 158,
+        "h": 196,
         "fill": COLORS["soft_orange"],
         "stroke": COLORS["orange"],
     },
-]
-
-
-HUB_CARD = {
-    "title": "PlaceDuVillage",
-    "lines": [
-            "hub principal",
-            "tu pars en branche",
-            "puis tu reviens ici",
-    ],
-    "x": 334,
-    "y": 234,
-    "w": 174,
-    "h": 84,
-    "fill": COLORS["soft_blue"],
-    "stroke": COLORS["blue"],
-}
-
-
-BRANCH_CARDS = [
-    {
-        "title": "Marché",
+    "hub": {
+        "title": "PlaceDuVillage",
         "lines": [
-            "cd PlaceDuMarché",
+            "hub principal",
+            "faire chaque branche",
+            "puis revenir ici",
+        ],
+        "x": 328,
+        "y": 242,
+        "w": 184,
+        "h": 88,
+        "fill": COLORS["soft_blue"],
+        "stroke": COLORS["blue"],
+    },
+    "market": {
+        "title": "PlaceDuMarché",
+        "lines": [
+            "ls",
             "cat SacÀDos",
             "unzip SacÀDos.zip",
-            "acheter mkdir puis rm",
+            "cat Vendeur -> mkdir",
+            "cat Vendeur -> rm",
         ],
-        "x": 50,
-        "y": 252,
+        "x": 28,
+        "y": 276,
         "w": 190,
-        "h": 80,
+        "h": 94,
         "fill": COLORS["soft_green"],
         "stroke": COLORS["green"],
-        "anchor_y": 292,
         "side": "left",
+        "anchor_y": 323,
+        "return_cmd": "cd ..",
+        "go_cmd": "cd PlaceDuMarché",
     },
-    {
-        "title": "Boutique",
+    "shop": {
+        "title": "BoutiqueArtisanale",
         "lines": [
-            "cd ../BoutiqueArtisanale",
+            "ls",
             "cat Artisane",
             "touch rouage",
-            "cp rouage rouage1 ... rouage5",
+            "cp rouage rouage1",
+            "cp rouage rouage2",
+            "cp rouage rouage3",
+            "cp rouage rouage4",
+            "cp rouage rouage5",
         ],
-        "x": 50,
-        "y": 148,
+        "x": 28,
+        "y": 156,
         "w": 190,
-        "h": 88,
+        "h": 106,
         "fill": COLORS["soft_green"],
         "stroke": COLORS["green"],
-        "anchor_y": 192,
         "side": "left",
+        "anchor_y": 209,
+        "return_cmd": "cd ..",
+        "go_cmd": "cd BoutiqueArtisanale",
     },
-    {
+    "library": {
         "title": "Bibliothèque",
         "lines": [
-            "cd ../Bibliothèque",
+            "ls",
             "./IntrigantLevier",
             "cd PièceSecrète",
             "cat Grep",
         ],
-        "x": 602,
-        "y": 252,
+        "x": 624,
+        "y": 276,
         "w": 190,
-        "h": 80,
+        "h": 94,
         "fill": COLORS["soft_blue"],
         "stroke": COLORS["blue"],
-        "anchor_y": 292,
         "side": "right",
+        "anchor_y": 323,
+        "return_cmd": "cd ../..",
+        "go_cmd": "cd Bibliothèque",
     },
-    {
+    "rocky": {
         "title": "CheminEnPierres",
-        "lines": [
-            "cd ../../CheminEnPierres",
-            "rm ÉnormeRocher",
-            "option : Ferme",
-        ],
-        "x": 602,
-        "y": 156,
+        "lines": ["ls", "rm ÉnormeRocher"],
+        "x": 624,
+        "y": 164,
         "w": 190,
-        "h": 72,
+        "h": 78,
         "fill": COLORS["soft_orange"],
         "stroke": COLORS["orange"],
-        "anchor_y": 192,
         "side": "right",
+        "anchor_y": 203,
+        "return_cmd": "cd ..",
+        "go_cmd": "cd CheminEnPierres",
     },
-]
-
-
-BOTTOM_CARDS = [
-    {
-        "title": "PontCassé -> Clairière",
+    "bridge": {
+        "title": "PontCassé et Clairière",
         "lines": [
-            "cd ../PontCassé",
+            "ls",
             "touch Planche",
             "cd Clairière",
+            "ls",
             "mkdir Maison",
         ],
-        "x": 238,
-        "y": 42,
-        "w": 168,
-        "h": 92,
+        "x": 188,
+        "y": 26,
+        "w": 150,
+        "h": 112,
         "fill": COLORS["soft_orange"],
         "stroke": COLORS["orange"],
     },
-    {
-        "title": "CaveDesTrolls",
+    "trolls": {
+        "title": "CheminInquiétant",
         "lines": [
-            "cd CheminInquiétant",
             "rm RoncesTordues",
             "cd CaveDesTrolls",
+            "ls",
             "rm TrollMoche",
             "mv Cage/EnfantKidnapé .",
+            "cd Toboggan",
         ],
-        "x": 432,
-        "y": 30,
-        "w": 180,
-        "h": 104,
+        "x": 406,
+        "y": 26,
+        "w": 168,
+        "h": 112,
         "fill": COLORS["soft_red"],
         "stroke": COLORS["red"],
     },
-    {
-        "title": "Finale",
+    "final": {
+        "title": "FichiersNoyau -> Paradis",
         "lines": [
-            "cd Toboggan -> cd FichiersNoyau",
-            "cat Prospectus -> cat Instructions",
-            "cd PlusDeFichiersNoyau -> grep pass *.txt",
-            "Mot de passe : IHTFP",
-            "sudo cat Certificat -> cd Paradis -> ls",
+            "ls",
+            "cat Prospectus",
+            "cat Instructions",
+            "cd PlusDeFichiersNoyau",
+            "grep pass *.txt",
+            "mot de passe : IHTFP",
+            "cd ..",
+            "sudo cat Certificat",
+            "cd Paradis",
+            "ls",
         ],
-        "x": 638,
-        "y": 22,
-        "w": 184,
-        "h": 112,
+        "x": 620,
+        "y": 18,
+        "w": 202,
+        "h": 128,
         "fill": COLORS["soft_gold"],
         "stroke": COLORS["gold"],
     },
+}
+
+
+TOP_LINKS = [
+    ("start", "forest", "cd BoisDesLutins"),
+    ("forest", "academy", "cd AcadémieDesBots"),
+    ("academy", "prairie", "cd ~/Prairie"),
+    ("prairie", "mountains", "cd Montagnes"),
+    ("mountains", "cave", "cd Cave"),
 ]
 
 
@@ -269,43 +282,44 @@ def make_styles():
         "title": ParagraphStyle(
             "title",
             fontName=FONT_BOLD,
-            fontSize=22,
-            leading=26,
+            fontSize=21,
+            leading=25,
             textColor=colors.white,
         ),
         "subtitle": ParagraphStyle(
             "subtitle",
             fontName=FONT_REGULAR,
-            fontSize=10.2,
-            leading=12.8,
+            fontSize=9.4,
+            leading=11.4,
             textColor=colors.white,
         ),
         "card_title": ParagraphStyle(
             "card_title",
             fontName=FONT_BOLD,
-            fontSize=11.3,
-            leading=13.6,
+            fontSize=10.9,
+            leading=13.2,
             textColor=colors.white,
         ),
         "code": ParagraphStyle(
             "code",
             fontName=FONT_CODE,
-            fontSize=7.4,
-            leading=8.7,
+            fontSize=6.8,
+            leading=7.8,
             textColor=COLORS["ink"],
         ),
         "small": ParagraphStyle(
             "small",
             fontName=FONT_REGULAR,
-            fontSize=8.2,
-            leading=10,
+            fontSize=8.0,
+            leading=9.6,
             textColor=COLORS["muted"],
         ),
-        "arrow": ParagraphStyle(
-            "arrow",
-            fontName=FONT_REGULAR,
-            fontSize=7.7,
-            leading=9,
+        "label": ParagraphStyle(
+            "label",
+            fontName=FONT_CODE,
+            fontSize=7.0,
+            leading=8.0,
+            alignment=1,
             textColor=COLORS["muted"],
         ),
     }
@@ -318,7 +332,9 @@ def draw_paragraph(pdf, text, style, x, top_y, width):
     return height
 
 
-def draw_round_panel(pdf, x, y, width, height, fill, stroke, radius=20, line_width=1.2):
+def draw_panel(pdf, x, y, width, height, fill, stroke, radius=18, line_width=1.2):
+    pdf.setFillColor(COLORS["shadow"])
+    pdf.roundRect(x + 3, y - 3, width, height, radius, fill=1, stroke=0)
     pdf.setFillColor(fill)
     pdf.setStrokeColor(stroke)
     pdf.setLineWidth(line_width)
@@ -326,28 +342,24 @@ def draw_round_panel(pdf, x, y, width, height, fill, stroke, radius=20, line_wid
 
 
 def draw_card(pdf, styles, card):
-    draw_round_panel(pdf, card["x"], card["y"], card["w"], card["h"], card["fill"], card["stroke"])
+    draw_panel(pdf, card["x"], card["y"], card["w"], card["h"], card["fill"], card["stroke"])
     pdf.setFillColor(card["stroke"])
     pdf.roundRect(card["x"], card["y"] + card["h"] - 28, card["w"], 28, 18, fill=1, stroke=0)
-    draw_paragraph(pdf, card["title"], styles["card_title"], card["x"] + 12, card["y"] + card["h"] - 5, card["w"] - 24)
-    top = card["y"] + card["h"] - 40
+    draw_paragraph(pdf, card["title"], styles["card_title"], card["x"] + 11, card["y"] + card["h"] - 5, card["w"] - 22)
+    top = card["y"] + card["h"] - 39
     for index, line in enumerate(card["lines"]):
-        draw_paragraph(pdf, line, styles["code"], card["x"] + 12, top - index * 9, card["w"] - 24)
+        draw_paragraph(pdf, line, styles["code"], card["x"] + 11, top - index * 8.2, card["w"] - 22)
 
 
-def draw_one_way_arrow(pdf, start, end):
+def draw_arrow_head(pdf, start, end):
     sx, sy = start
     ex, ey = end
-    pdf.setStrokeColor(COLORS["line"])
-    pdf.setLineWidth(1.6)
-    pdf.line(sx, sy, ex, ey)
-
     dx = ex - sx
     dy = ey - sy
     length = max((dx * dx + dy * dy) ** 0.5, 1)
     ux = dx / length
     uy = dy / length
-    size = 6
+    size = 5.6
     px = ex - ux * 8
     py = ey - uy * 8
     left_x = px - uy * size
@@ -358,20 +370,72 @@ def draw_one_way_arrow(pdf, start, end):
     pdf.line(ex, ey, right_x, right_y)
 
 
-def draw_bi_arrow_horizontal(pdf, styles, x1, x2, y, outward="left"):
-    offset = 5
+def draw_poly_arrow(pdf, points, stroke=None, width=1.6):
+    pdf.setStrokeColor(stroke or COLORS["line"])
+    pdf.setLineWidth(width)
+    for start, end in zip(points, points[1:]):
+        pdf.line(start[0], start[1], end[0], end[1])
+    draw_arrow_head(pdf, points[-2], points[-1])
+
+
+def label_width(text):
+    return min(max(54, int(len(text) * 4.7 + 18)), 118)
+
+
+def draw_label_box(pdf, styles, text, center_x, center_y, width=None):
+    box_width = width or label_width(text)
+    box_height = 16
+    x = center_x - box_width / 2
+    y = center_y - box_height / 2
+    pdf.setFillColor(COLORS["white"])
     pdf.setStrokeColor(COLORS["line"])
-    pdf.setLineWidth(1.4)
+    pdf.setLineWidth(0.9)
+    pdf.roundRect(x, y, box_width, box_height, 7, fill=1, stroke=1)
+    draw_paragraph(pdf, text, styles["label"], x + 5, y + box_height - 1, box_width - 10)
 
-    if outward == "left":
-        draw_one_way_arrow(pdf, (x2, y + offset), (x1, y + offset))
-        draw_one_way_arrow(pdf, (x1, y - offset), (x2, y - offset))
+
+def right_center(card):
+    return (card["x"] + card["w"], card["y"] + card["h"] / 2)
+
+
+def left_center(card):
+    return (card["x"], card["y"] + card["h"] / 2)
+
+
+def top_center(card):
+    return (card["x"] + card["w"] / 2, card["y"] + card["h"])
+
+
+def bottom_center(card):
+    return (card["x"] + card["w"] / 2, card["y"])
+
+
+def draw_top_link(pdf, styles, left_card, right_card, text):
+    start = right_center(left_card)
+    end = left_center(right_card)
+    y = (start[1] + end[1]) / 2
+    draw_poly_arrow(pdf, [(start[0], y), (end[0], y)])
+    label_y = max(left_card["y"] + left_card["h"], right_card["y"] + right_card["h"]) + 12
+    draw_label_box(pdf, styles, text, (start[0] + end[0]) / 2, label_y)
+
+
+def draw_parallel_branch_link(pdf, styles, hub_card, branch_card):
+    branch_mid_x = branch_card["x"] + branch_card["w"] if branch_card["side"] == "left" else branch_card["x"]
+    hub_mid_x = hub_card["x"] if branch_card["side"] == "left" else hub_card["x"] + hub_card["w"]
+    y = branch_card["anchor_y"]
+    out_y = y + 7
+    back_y = y - 7
+
+    if branch_card["side"] == "left":
+        draw_poly_arrow(pdf, [(hub_mid_x, out_y), (branch_mid_x, out_y)])
+        draw_poly_arrow(pdf, [(branch_mid_x, back_y), (hub_mid_x, back_y)])
     else:
-        draw_one_way_arrow(pdf, (x1, y + offset), (x2, y + offset))
-        draw_one_way_arrow(pdf, (x2, y - offset), (x1, y - offset))
+        draw_poly_arrow(pdf, [(hub_mid_x, out_y), (branch_mid_x, out_y)])
+        draw_poly_arrow(pdf, [(branch_mid_x, back_y), (hub_mid_x, back_y)])
 
-    label_x = (x1 + x2) / 2 - 16
-    draw_paragraph(pdf, "retour", styles["arrow"], label_x, y - 10, 40)
+    mid_x = (hub_mid_x + branch_mid_x) / 2
+    draw_label_box(pdf, styles, branch_card["go_cmd"], mid_x, out_y + 14)
+    draw_label_box(pdf, styles, branch_card["return_cmd"], mid_x, back_y - 14, width=64 if branch_card["return_cmd"] == "cd .." else 76)
 
 
 def build_pdf():
@@ -391,46 +455,54 @@ def build_pdf():
     pdf.setFillColor(COLORS["gold"])
     pdf.rect(0, PAGE_HEIGHT - 68, PAGE_WIDTH, 4, fill=1, stroke=0)
 
-    draw_paragraph(pdf, "Terminus - chemin visuel", styles["title"], 26, PAGE_HEIGHT - 12, 420)
+    draw_paragraph(pdf, "Terminus - solution en cards", styles["title"], 24, PAGE_HEIGHT - 12, 420)
     draw_paragraph(
         pdf,
-        "Cards bien séparées, flèches d'aller et flèches de retour quand tu repars du hub.",
+        "Toutes les flèches affichent la vraie commande pour avancer ou revenir.",
         styles["subtitle"],
-        26,
-        PAGE_HEIGHT - 36,
-        520,
+        24,
+        PAGE_HEIGHT - 37,
+        470,
     )
+    draw_label_box(pdf, styles, "haut = aller", 707, PAGE_HEIGHT - 28, 86)
+    draw_label_box(pdf, styles, "bas = retour", 793, PAGE_HEIGHT - 28, 90)
 
-    for card in MAIN_CARDS:
-        draw_card(pdf, styles, card)
-    draw_card(pdf, styles, HUB_CARD)
-    for card in BRANCH_CARDS:
-        draw_card(pdf, styles, card)
-    for card in BOTTOM_CARDS:
+    for card in CARDS.values():
         draw_card(pdf, styles, card)
 
-    # Main top path
-    draw_one_way_arrow(pdf, (116, 431), (132, 431))
-    draw_one_way_arrow(pdf, (244, 431), (260, 431))
-    draw_one_way_arrow(pdf, (396, 431), (412, 431))
-    draw_one_way_arrow(pdf, (514, 431), (530, 431))
-    draw_one_way_arrow(pdf, (642, 431), (658, 431))
-    draw_one_way_arrow(pdf, (740, 380), (421, 318))
+    for left_key, right_key, text in TOP_LINKS:
+        draw_top_link(pdf, styles, CARDS[left_key], CARDS[right_key], text)
 
-    # Hub branches with explicit return
-    draw_bi_arrow_horizontal(pdf, styles, 240, 334, 292, outward="left")
-    draw_bi_arrow_horizontal(pdf, styles, 240, 334, 192, outward="left")
-    draw_bi_arrow_horizontal(pdf, styles, 508, 602, 292, outward="right")
-    draw_bi_arrow_horizontal(pdf, styles, 508, 602, 192, outward="right")
+    draw_poly_arrow(
+        pdf,
+        [
+            left_center(CARDS["cave"]),
+            (596, 386),
+            (558, 356),
+            (486, CARDS["hub"]["y"] + CARDS["hub"]["h"]),
+        ],
+    )
+    draw_label_box(pdf, styles, "cd PlaceDuVillage", 606, 401, 94)
 
-    # Main continuation downward
-    draw_one_way_arrow(pdf, (421, 234), (322, 134))
-    draw_one_way_arrow(pdf, (406, 88), (432, 88))
-    draw_one_way_arrow(pdf, (612, 82), (638, 78))
+    draw_parallel_branch_link(pdf, styles, CARDS["hub"], CARDS["market"])
+    draw_parallel_branch_link(pdf, styles, CARDS["hub"], CARDS["shop"])
+    draw_parallel_branch_link(pdf, styles, CARDS["hub"], CARDS["library"])
+    draw_parallel_branch_link(pdf, styles, CARDS["hub"], CARDS["rocky"])
 
-    pdf.setFont(FONT_REGULAR, 8.2)
+    bridge_top = top_center(CARDS["bridge"])
+    hub_bottom = bottom_center(CARDS["hub"])
+    draw_poly_arrow(pdf, [(hub_bottom[0], hub_bottom[1]), bridge_top])
+    draw_label_box(pdf, styles, "cd PontCassé", 344, 182, 78)
+
+    draw_poly_arrow(pdf, [right_center(CARDS["bridge"]), (338, 148), (406, 148), left_center(CARDS["trolls"])])
+    draw_label_box(pdf, styles, "cd CheminInquiétant", 372, 156, 108)
+
+    draw_poly_arrow(pdf, [right_center(CARDS["trolls"]), (574, 148), (620, 148), left_center(CARDS["final"])])
+    draw_label_box(pdf, styles, "cd FichiersNoyau", 597, 156, 92)
+
+    pdf.setFont(FONT_REGULAR, 8.0)
     pdf.setFillColor(COLORS["muted"])
-    pdf.drawString(26, 12, "Version courte vérifiée sur le build local.")
+    pdf.drawString(24, 12, "Version revérifiée sur le build local : sans chemin inventé.")
 
     pdf.save()
     print(f"written {OUTPUT_PATH}")
