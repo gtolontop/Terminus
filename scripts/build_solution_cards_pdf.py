@@ -18,9 +18,9 @@ FONT_CODE = "ConsolasTerminus"
 
 COLORS = {
     "bg": colors.HexColor("#F6F1E8"),
-    "ink": colors.HexColor("#18222D"),
-    "muted": colors.HexColor("#5E6975"),
-    "line": colors.HexColor("#C9D3DD"),
+    "ink": colors.HexColor("#17212B"),
+    "muted": colors.HexColor("#5D6975"),
+    "line": colors.HexColor("#C8D2DD"),
     "blue": colors.HexColor("#234E70"),
     "green": colors.HexColor("#2D6A4F"),
     "orange": colors.HexColor("#C96B1F"),
@@ -30,144 +30,201 @@ COLORS = {
     "soft_green": colors.HexColor("#EBF6EF"),
     "soft_orange": colors.HexColor("#FCF1E5"),
     "soft_gold": colors.HexColor("#FBF3DE"),
-    "soft_red": colors.HexColor("#FAE9E6"),
+    "soft_red": colors.HexColor("#F9E8E5"),
 }
 
 
-CARDS = [
+MAIN_CARDS = [
     {
-        "title": "1. Départ",
-        "subtitle": "prise en main",
+        "title": "Départ",
         "lines": [
             "ls",
             "cat Palourde",
             "cd BoisDesLutins",
         ],
-        "x": 26,
-        "y": 390,
-        "w": 240,
-        "h": 128,
+        "x": 20,
+        "y": 392,
+        "w": 96,
+        "h": 78,
         "fill": COLORS["soft_blue"],
         "stroke": COLORS["blue"],
     },
     {
-        "title": "2. BoisDesLutins + Académie",
-        "subtitle": "pwd puis mv",
+        "title": "BoisDesLutins",
         "lines": [
             "cat RentreChezToi",
             "cd AcadémieDesBots/Cours",
+        ],
+        "x": 132,
+        "y": 392,
+        "w": 112,
+        "h": 78,
+        "fill": COLORS["soft_green"],
+        "stroke": COLORS["green"],
+    },
+    {
+        "title": "Académie",
+        "lines": [
             "cat Professeur",
             "cd ../SalleDEntrainement",
             "mv Pilier* ~/",
         ],
-        "x": 302,
-        "y": 390,
-        "w": 240,
-        "h": 128,
+        "x": 260,
+        "y": 380,
+        "w": 136,
+        "h": 90,
         "fill": COLORS["soft_green"],
         "stroke": COLORS["green"],
     },
     {
-        "title": "3. Prairie + Montagnes",
-        "subtitle": "Poney, VieilHomme, Manuscrit",
+        "title": "Prairie",
         "lines": [
             "cd ~/Prairie",
             "cat Poney",
+        ],
+        "x": 412,
+        "y": 392,
+        "w": 102,
+        "h": 78,
+        "fill": COLORS["soft_green"],
+        "stroke": COLORS["green"],
+    },
+    {
+        "title": "Montagnes",
+        "lines": [
             "cd Montagnes",
             "cat VieilHomme",
             "cat Manuscrit",
         ],
-        "x": 578,
-        "y": 390,
-        "w": 240,
-        "h": 128,
+        "x": 530,
+        "y": 392,
+        "w": 112,
+        "h": 78,
         "fill": COLORS["soft_green"],
         "stroke": COLORS["green"],
     },
     {
-        "title": "4. Cave -> Portail",
-        "subtitle": "ouvrir le tunnel",
+        "title": "Cave -> Portail",
         "lines": [
             "cd Cave/SombreCorridor/Cellier",
             "mv Rocher PetitRenfoncement",
-            "cd Tunnel/ChambreDePierre/Portail/PlaceDuVillage",
+            "cd .../PlaceDuVillage",
         ],
-        "x": 26,
-        "y": 238,
-        "w": 240,
-        "h": 128,
+        "x": 658,
+        "y": 380,
+        "w": 164,
+        "h": 90,
         "fill": COLORS["soft_orange"],
         "stroke": COLORS["orange"],
     },
+]
+
+
+HUB_CARD = {
+    "title": "PlaceDuVillage",
+    "lines": [
+            "hub principal",
+            "tu pars en branche",
+            "puis tu reviens ici",
+    ],
+    "x": 334,
+    "y": 234,
+    "w": 174,
+    "h": 84,
+    "fill": COLORS["soft_blue"],
+    "stroke": COLORS["blue"],
+}
+
+
+BRANCH_CARDS = [
     {
-        "title": "5. Marché",
-        "subtitle": "unzip, mkdir, rm",
+        "title": "Marché",
         "lines": [
             "cd PlaceDuMarché",
             "cat SacÀDos",
             "unzip SacÀDos.zip",
             "acheter mkdir puis rm",
         ],
-        "x": 302,
-        "y": 238,
-        "w": 240,
-        "h": 128,
+        "x": 50,
+        "y": 252,
+        "w": 190,
+        "h": 80,
         "fill": COLORS["soft_green"],
         "stroke": COLORS["green"],
+        "anchor_y": 292,
+        "side": "left",
     },
     {
-        "title": "6. Boutique",
-        "subtitle": "touch puis cp",
+        "title": "Boutique",
         "lines": [
             "cd ../BoutiqueArtisanale",
             "cat Artisane",
             "touch rouage",
             "cp rouage rouage1 ... rouage5",
         ],
-        "x": 578,
-        "y": 238,
-        "w": 240,
-        "h": 128,
+        "x": 50,
+        "y": 148,
+        "w": 190,
+        "h": 88,
         "fill": COLORS["soft_green"],
         "stroke": COLORS["green"],
+        "anchor_y": 192,
+        "side": "left",
     },
     {
-        "title": "7. Bibliothèque",
-        "subtitle": "débloquer grep",
+        "title": "Bibliothèque",
         "lines": [
             "cd ../Bibliothèque",
             "./IntrigantLevier",
             "cd PièceSecrète",
             "cat Grep",
         ],
-        "x": 26,
-        "y": 86,
-        "w": 240,
-        "h": 128,
+        "x": 602,
+        "y": 252,
+        "w": 190,
+        "h": 80,
         "fill": COLORS["soft_blue"],
         "stroke": COLORS["blue"],
+        "anchor_y": 292,
+        "side": "right",
     },
     {
-        "title": "8. CheminEnPierres + PontCassé",
-        "subtitle": "rocher, planche, maison",
+        "title": "CheminEnPierres",
         "lines": [
             "cd ../../CheminEnPierres",
             "rm ÉnormeRocher",
+            "option : Ferme",
+        ],
+        "x": 602,
+        "y": 156,
+        "w": 190,
+        "h": 72,
+        "fill": COLORS["soft_orange"],
+        "stroke": COLORS["orange"],
+        "anchor_y": 192,
+        "side": "right",
+    },
+]
+
+
+BOTTOM_CARDS = [
+    {
+        "title": "PontCassé -> Clairière",
+        "lines": [
             "cd ../PontCassé",
             "touch Planche",
             "cd Clairière",
             "mkdir Maison",
         ],
-        "x": 302,
-        "y": 86,
-        "w": 240,
-        "h": 128,
+        "x": 238,
+        "y": 42,
+        "w": 168,
+        "h": 92,
         "fill": COLORS["soft_orange"],
         "stroke": COLORS["orange"],
     },
     {
-        "title": "9. CaveDesTrolls",
-        "subtitle": "sortie locale",
+        "title": "CaveDesTrolls",
         "lines": [
             "cd CheminInquiétant",
             "rm RoncesTordues",
@@ -175,47 +232,29 @@ CARDS = [
             "rm TrollMoche",
             "mv Cage/EnfantKidnapé .",
         ],
-        "x": 578,
-        "y": 86,
-        "w": 240,
-        "h": 128,
+        "x": 432,
+        "y": 30,
+        "w": 180,
+        "h": 104,
         "fill": COLORS["soft_red"],
         "stroke": COLORS["red"],
     },
-]
-
-
-FINAL_CARD = {
-    "title": "10. Finale",
-    "subtitle": "FichiersNoyau -> Paradis",
-    "lines": [
-        "cd Toboggan -> cd FichiersNoyau",
-        "cat Prospectus -> cat Instructions",
-        "cd PlusDeFichiersNoyau -> grep pass *.txt",
-        "Mot de passe : IHTFP",
-        "sudo cat Certificat -> cd Paradis -> ls",
-    ],
-    "x": 470,
-    "y": 10,
-    "w": 348,
-    "h": 68,
-    "fill": COLORS["soft_gold"],
-    "stroke": COLORS["gold"],
-}
-
-
-ARROWS = [
-    ((266, 454), (302, 454)),
-    ((542, 454), (578, 454)),
-    ((146, 390), (146, 366)),
-    ((422, 390), (422, 366)),
-    ((698, 390), (698, 366)),
-    ((266, 302), (302, 302)),
-    ((542, 302), (578, 302)),
-    ((146, 238), (146, 214)),
-    ((422, 238), (422, 214)),
-    ((698, 238), (698, 214)),
-    ((698, 86), (698, 78)),
+    {
+        "title": "Finale",
+        "lines": [
+            "cd Toboggan -> cd FichiersNoyau",
+            "cat Prospectus -> cat Instructions",
+            "cd PlusDeFichiersNoyau -> grep pass *.txt",
+            "Mot de passe : IHTFP",
+            "sudo cat Certificat -> cd Paradis -> ls",
+        ],
+        "x": 638,
+        "y": 22,
+        "w": 184,
+        "h": 112,
+        "fill": COLORS["soft_gold"],
+        "stroke": COLORS["gold"],
+    },
 ]
 
 
@@ -230,43 +269,43 @@ def make_styles():
         "title": ParagraphStyle(
             "title",
             fontName=FONT_BOLD,
-            fontSize=23,
-            leading=27,
+            fontSize=22,
+            leading=26,
             textColor=colors.white,
         ),
         "subtitle": ParagraphStyle(
             "subtitle",
             fontName=FONT_REGULAR,
             fontSize=10.2,
-            leading=13,
+            leading=12.8,
             textColor=colors.white,
         ),
         "card_title": ParagraphStyle(
             "card_title",
             fontName=FONT_BOLD,
-            fontSize=12.5,
-            leading=15,
-            textColor=COLORS["ink"],
-        ),
-        "card_subtitle": ParagraphStyle(
-            "card_subtitle",
-            fontName=FONT_REGULAR,
-            fontSize=8.8,
-            leading=10,
-            textColor=COLORS["muted"],
+            fontSize=11.3,
+            leading=13.6,
+            textColor=colors.white,
         ),
         "code": ParagraphStyle(
             "code",
             fontName=FONT_CODE,
-            fontSize=8.2,
-            leading=9.8,
+            fontSize=7.4,
+            leading=8.7,
             textColor=COLORS["ink"],
         ),
         "small": ParagraphStyle(
             "small",
             fontName=FONT_REGULAR,
-            fontSize=8.3,
+            fontSize=8.2,
             leading=10,
+            textColor=COLORS["muted"],
+        ),
+        "arrow": ParagraphStyle(
+            "arrow",
+            fontName=FONT_REGULAR,
+            fontSize=7.7,
+            leading=9,
             textColor=COLORS["muted"],
         ),
     }
@@ -279,14 +318,24 @@ def draw_paragraph(pdf, text, style, x, top_y, width):
     return height
 
 
-def draw_round_panel(pdf, x, y, width, height, fill, stroke, radius=18, line_width=1.2):
+def draw_round_panel(pdf, x, y, width, height, fill, stroke, radius=20, line_width=1.2):
     pdf.setFillColor(fill)
     pdf.setStrokeColor(stroke)
     pdf.setLineWidth(line_width)
     pdf.roundRect(x, y, width, height, radius, fill=1, stroke=1)
 
 
-def draw_arrow(pdf, start, end):
+def draw_card(pdf, styles, card):
+    draw_round_panel(pdf, card["x"], card["y"], card["w"], card["h"], card["fill"], card["stroke"])
+    pdf.setFillColor(card["stroke"])
+    pdf.roundRect(card["x"], card["y"] + card["h"] - 28, card["w"], 28, 18, fill=1, stroke=0)
+    draw_paragraph(pdf, card["title"], styles["card_title"], card["x"] + 12, card["y"] + card["h"] - 5, card["w"] - 24)
+    top = card["y"] + card["h"] - 40
+    for index, line in enumerate(card["lines"]):
+        draw_paragraph(pdf, line, styles["code"], card["x"] + 12, top - index * 9, card["w"] - 24)
+
+
+def draw_one_way_arrow(pdf, start, end):
     sx, sy = start
     ex, ey = end
     pdf.setStrokeColor(COLORS["line"])
@@ -309,15 +358,20 @@ def draw_arrow(pdf, start, end):
     pdf.line(ex, ey, right_x, right_y)
 
 
-def draw_card(pdf, styles, card):
-    draw_round_panel(pdf, card["x"], card["y"], card["w"], card["h"], card["fill"], card["stroke"])
-    pdf.setFillColor(card["stroke"])
-    pdf.roundRect(card["x"], card["y"] + card["h"] - 28, card["w"], 28, 18, fill=1, stroke=0)
-    draw_paragraph(pdf, card["title"], styles["subtitle"], card["x"] + 14, card["y"] + card["h"] - 6, card["w"] - 28)
-    draw_paragraph(pdf, card["subtitle"], styles["card_subtitle"], card["x"] + 14, card["y"] + card["h"] - 34, card["w"] - 28)
-    top = card["y"] + card["h"] - 48
-    for index, line in enumerate(card["lines"]):
-        draw_paragraph(pdf, f"{index + 1}. {line}", styles["code"], card["x"] + 14, top - index * 10, card["w"] - 28)
+def draw_bi_arrow_horizontal(pdf, styles, x1, x2, y, outward="left"):
+    offset = 5
+    pdf.setStrokeColor(COLORS["line"])
+    pdf.setLineWidth(1.4)
+
+    if outward == "left":
+        draw_one_way_arrow(pdf, (x2, y + offset), (x1, y + offset))
+        draw_one_way_arrow(pdf, (x1, y - offset), (x2, y - offset))
+    else:
+        draw_one_way_arrow(pdf, (x1, y + offset), (x2, y + offset))
+        draw_one_way_arrow(pdf, (x2, y - offset), (x1, y - offset))
+
+    label_x = (x1 + x2) / 2 - 16
+    draw_paragraph(pdf, "retour", styles["arrow"], label_x, y - 10, 40)
 
 
 def build_pdf():
@@ -333,48 +387,50 @@ def build_pdf():
     pdf.rect(0, 0, PAGE_WIDTH, PAGE_HEIGHT, fill=1, stroke=0)
 
     pdf.setFillColor(COLORS["blue"])
-    pdf.rect(0, PAGE_HEIGHT - 68, PAGE_WIDTH, 68, fill=1, stroke=0)
+    pdf.rect(0, PAGE_HEIGHT - 64, PAGE_WIDTH, 64, fill=1, stroke=0)
     pdf.setFillColor(COLORS["gold"])
-    pdf.rect(0, PAGE_HEIGHT - 72, PAGE_WIDTH, 4, fill=1, stroke=0)
+    pdf.rect(0, PAGE_HEIGHT - 68, PAGE_WIDTH, 4, fill=1, stroke=0)
 
-    draw_paragraph(pdf, "Terminus - solution en cards", styles["title"], 28, PAGE_HEIGHT - 14, 430)
+    draw_paragraph(pdf, "Terminus - chemin visuel", styles["title"], 26, PAGE_HEIGHT - 12, 420)
     draw_paragraph(
         pdf,
-        "Une page paysage, uniquement en cards, avec les commandes exactes dans l'ordre.",
+        "Cards bien séparées, flèches d'aller et flèches de retour quand tu repars du hub.",
         styles["subtitle"],
-        28,
-        PAGE_HEIGHT - 40,
+        26,
+        PAGE_HEIGHT - 36,
         520,
     )
 
-    for start, end in ARROWS:
-        draw_arrow(pdf, start, end)
-
-    for card in CARDS:
+    for card in MAIN_CARDS:
+        draw_card(pdf, styles, card)
+    draw_card(pdf, styles, HUB_CARD)
+    for card in BRANCH_CARDS:
+        draw_card(pdf, styles, card)
+    for card in BOTTOM_CARDS:
         draw_card(pdf, styles, card)
 
-    draw_round_panel(
-        pdf,
-        FINAL_CARD["x"],
-        FINAL_CARD["y"],
-        FINAL_CARD["w"],
-        FINAL_CARD["h"],
-        FINAL_CARD["fill"],
-        FINAL_CARD["stroke"],
-        radius=18,
-        line_width=1.2,
-    )
-    pdf.setFillColor(FINAL_CARD["stroke"])
-    pdf.roundRect(FINAL_CARD["x"], FINAL_CARD["y"] + FINAL_CARD["h"] - 24, FINAL_CARD["w"], 24, 18, fill=1, stroke=0)
-    draw_paragraph(pdf, FINAL_CARD["title"], styles["subtitle"], FINAL_CARD["x"] + 14, FINAL_CARD["y"] + FINAL_CARD["h"] - 4, FINAL_CARD["w"] - 28)
+    # Main top path
+    draw_one_way_arrow(pdf, (116, 431), (132, 431))
+    draw_one_way_arrow(pdf, (244, 431), (260, 431))
+    draw_one_way_arrow(pdf, (396, 431), (412, 431))
+    draw_one_way_arrow(pdf, (514, 431), (530, 431))
+    draw_one_way_arrow(pdf, (642, 431), (658, 431))
+    draw_one_way_arrow(pdf, (740, 380), (421, 318))
 
-    final_top = FINAL_CARD["y"] + FINAL_CARD["h"] - 28
-    for index, line in enumerate(FINAL_CARD["lines"]):
-        draw_paragraph(pdf, line, styles["code"], FINAL_CARD["x"] + 14, final_top - index * 9, FINAL_CARD["w"] - 28)
+    # Hub branches with explicit return
+    draw_bi_arrow_horizontal(pdf, styles, 240, 334, 292, outward="left")
+    draw_bi_arrow_horizontal(pdf, styles, 240, 334, 192, outward="left")
+    draw_bi_arrow_horizontal(pdf, styles, 508, 602, 292, outward="right")
+    draw_bi_arrow_horizontal(pdf, styles, 508, 602, 192, outward="right")
 
-    pdf.setFont(FONT_REGULAR, 8.4)
+    # Main continuation downward
+    draw_one_way_arrow(pdf, (421, 234), (322, 134))
+    draw_one_way_arrow(pdf, (406, 88), (432, 88))
+    draw_one_way_arrow(pdf, (612, 82), (638, 78))
+
+    pdf.setFont(FONT_REGULAR, 8.2)
     pdf.setFillColor(COLORS["muted"])
-    pdf.drawString(26, 16, "Version courte verifiee sur le build local.")
+    pdf.drawString(26, 12, "Version courte vérifiée sur le build local.")
 
     pdf.save()
     print(f"written {OUTPUT_PATH}")
