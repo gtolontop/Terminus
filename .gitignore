@@ -4,6 +4,7 @@ output/*
 output/pdf/*
 !output/pdf/terminus-rendu.pdf
 !output/pdf/terminus-solution-paysage.pdf
+!output/pdf/terminus-solution-cards-paysage.pdf
 tmp/
 *.log
 Thumbs.db
