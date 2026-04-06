@@ -1,0 +1,5 @@
+references-upstream-luffah.git/
+output/
+tmp/
+*.log
+Thumbs.db
